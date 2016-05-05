@@ -1,0 +1,40 @@
+body{
+	font-family: "Times New Roman", Times, serif;
+	background: #38ACEC;
+	color: #FFF;
+}
+.jstreeleft{
+	float: left;
+	width:20%;
+	height: 100%;
+	/*background:red;*/
+	border-right: solid 5px blue;
+	margin-left: 1%;
+
+
+}
+#menu{
+	float: left;
+	width:15%;
+	/*background:red;*/
+	border-right: solid 5px blue;
+	padding: auto;
+	text-align: center;
+
+
+}
+
+.jstreeright{
+	float: right;
+	width:55%;
+	/*background:blue;*/
+	border-right: solid 5px blue;
+	padding-right: 1%;
+
+
+}
+
+.thai{
+	
+	font-family: "TH-saraban @charset UTF-8;";
+}
