@@ -164,7 +164,7 @@ foreach ($out_w as $row) {
       $fam['thaiName'][$k] = $v['thaiName'];
       
     }
-    array_multisort($fam['code'],SORT_ASC,$result);
+    //array_multisort($fam['code'],SORT_ASC,$result);
     $cntf=count($result);
 //==========================================================================================================///
 //==================================================== Department =========================================////
@@ -182,6 +182,7 @@ foreach ($out_w as $row) {
 		 
 		}
 		  $rdepart = array_values($rdepart);
+		  //var_dump($rdepart) ;
 
 		      $De = array();
 		      foreach ($rdepart as $k => $v) {
@@ -190,7 +191,7 @@ foreach ($out_w as $row) {
 		      $De['parentCode'][$k] = $v['parentCode'];
 		      
 		    	}
-		    array_multisort($De['code'],SORT_ASC,$rdepart);
+		    //array_multisort($De['code'],SORT_ASC,$rdepart);
 		    $cntD=count($rdepart);
 //==============================================================================================================
 //==================================================== category =========================================////
@@ -216,7 +217,7 @@ foreach ($out_w as $row) {
 		      $Ca['parentCode'][$k] = $v['parentCode'];
 		      
 		    	}
-		    array_multisort($Ca['code'],SORT_ASC,$rcate);
+		    //array_multisort($Ca['code'],SORT_ASC,$rcate);
 		    $cntC=count($rcate);
 //==============================================================================================================
 //==================================================== subcate =========================================////
@@ -242,7 +243,7 @@ foreach ($out_w as $row) {
 		      $Sub['parentCode'][$k] = $v['parentCode'];
 		      
 		    	}
-		    array_multisort($Sub['code'],SORT_ASC,$rsub);
+		    //array_multisort($Sub['code'],SORT_ASC,$rsub);
 		    $cntS=count($rsub);
 //==============================================================================================================
 ?>
@@ -509,7 +510,6 @@ d++;
     var parent = p.join().split(":");
     var content = "#"+title[0]+";#"+title[1]+";"+t.join()+";."+parent[0]+";."+parent[1];
     $('#title').html('<h3>หมวดหมู่ '+t.join()+' รหัส '+title[1]+'</h3>');
-   
    document.getElementById("add").value = content;
    document.getElementById("move").value = content;
    document.getElementById("edit").value = i.join();
@@ -518,7 +518,11 @@ d++;
    document.getElementById("delete_button").value = "ลบ "+t.join();
    document.getElementById("add_button").value = "เพิ่มลูกของ "+t.join();
    
-   
+   if(title[0] != "subcate"){
+document.getElementById("move_button").disabled = true;
+
+   }else{document.getElementById("move_button").disabled = false;}
+
 	var edit = document.forms["edit"]["id"].value;
 	if(edit == null || edit == ""){document.getElementById("edit_button").disabled = true;}
    else{document.getElementById("edit_button").disabled = false;}

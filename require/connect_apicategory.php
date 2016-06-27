@@ -32,7 +32,7 @@ $output = curl_exec($ch);
 $cate = "[";
 $sub = explode("[",$output);
 $cate .= substr($sub[1],0,-1);
-//echo $cate;
+echo $cate;
 
 
 ?>
