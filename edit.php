@@ -12,7 +12,6 @@ echo "ชื่อสินค้า :".$_GET['Thainame']."<hr>";
 echo "หน่วยนับ :".$_GET['unitcode']."<hr>";
 echo "ผู้จัดการ :".$_GET['cate']."<hr>";
 }else{
-
 	echo "<script>
 		    if(confirm('ท่านต้องการแก้ไขข้อมูลของ $_GET[title] หรือไม่? ')){
 		    }else{
