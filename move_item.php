@@ -176,7 +176,6 @@
 	</div>
 </div>
 <?php
-//============================================ family ============================================================
 echo "<div style='display:none;'>";
 require("require/connect_apifamily.php");
 $out_w=json_decode($end,true);
@@ -198,7 +197,7 @@ foreach ($out_w as $row) {
       $fam['thaiName'][$k] = $v['thaiName'];
       
     }
-    array_multisort($fam['code'],SORT_ASC,$result);
+    //array_multisort($fam['code'],SORT_ASC,$result);
     $cntf=count($result);
 //==========================================================================================================///
 //==================================================== Department =========================================////
@@ -216,6 +215,7 @@ foreach ($out_w as $row) {
 		 
 		}
 		  $rdepart = array_values($rdepart);
+		  //var_dump($rdepart) ;
 
 		      $De = array();
 		      foreach ($rdepart as $k => $v) {
@@ -224,7 +224,7 @@ foreach ($out_w as $row) {
 		      $De['parentCode'][$k] = $v['parentCode'];
 		      
 		    	}
-		    array_multisort($De['code'],SORT_ASC,$rdepart);
+		    //array_multisort($De['code'],SORT_ASC,$rdepart);
 		    $cntD=count($rdepart);
 //==============================================================================================================
 //==================================================== category =========================================////
@@ -250,7 +250,7 @@ foreach ($out_w as $row) {
 		      $Ca['parentCode'][$k] = $v['parentCode'];
 		      
 		    	}
-		    array_multisort($Ca['code'],SORT_ASC,$rcate);
+		    //array_multisort($Ca['code'],SORT_ASC,$rcate);
 		    $cntC=count($rcate);
 //==============================================================================================================
 //==================================================== subcate =========================================////
@@ -276,7 +276,7 @@ foreach ($out_w as $row) {
 		      $Sub['parentCode'][$k] = $v['parentCode'];
 		      
 		    	}
-		    array_multisort($Sub['code'],SORT_ASC,$rsub);
+		    //array_multisort($Sub['code'],SORT_ASC,$rsub);
 		    $cntS=count($rsub);
 //==============================================================================================================
 ?>
@@ -306,6 +306,7 @@ foreach ($out_w as $row) {
 			}
 
   }
+//echo $all;
 //echo $all;
 
 ?>

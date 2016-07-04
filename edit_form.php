@@ -21,7 +21,6 @@
 </script>
 </head>
 <body>
-
 <div id="header"><h1 class="hleft"> Manage Category</h1></div>
 <div style="height: 55px;"></div>
 <br><h1 class="head">แก้ไขข้อมูล</h1>
